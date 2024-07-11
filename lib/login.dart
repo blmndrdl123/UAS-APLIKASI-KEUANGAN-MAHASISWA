@@ -11,7 +11,7 @@ class LoginApp extends StatelessWidget {
     return MaterialApp(
       title: 'Login App',
       theme: ThemeData(
-        primaryColor: Colors.blue,
+        primaryColor: Colors.white,
         fontFamily: 'Roboto',
       ),
       home: LoginPage(),
@@ -23,19 +23,18 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-           
             SizedBox(
               height: 10,
             ),
             Container(
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.blue,
                 borderRadius: BorderRadius.circular(15),
                 boxShadow: [
                   BoxShadow(
@@ -47,12 +46,10 @@ class LoginPage extends StatelessWidget {
               ),
               child: Column(
                 children: <Widget>[
-                  Text(
-                    'Login',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Image.asset(
+                    'gambar/uang.jpeg',
+                    width: 200,
+                    height: 200,
                   ),
                   SizedBox(height: 20),
                   TextField(
@@ -77,23 +74,24 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   ElevatedButton(
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => MainMenu(), // Ganti dengan halaman tujuan setelah login
-      ),
-    );
-  },
-  child: Text('OK'),
-  style: ElevatedButton.styleFrom(
-    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(10),
-    ),
-  ),
-),
-
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              MainMenu(), // Ganti dengan halaman tujuan setelah login
+                        ),
+                      );
+                    },
+                    child: Text('Masuk'),
+                    style: ElevatedButton.styleFrom(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(90),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

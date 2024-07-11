@@ -1,11 +1,23 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:uts_pemmobile/launcher.dart';
 import 'package:uts_pemmobile/login.dart';
+import 'package:uts_pemmobile/login1.dart';
+import 'package:uts_pemmobile/screen/auth_screen.dart';
+import 'firebase_options.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(MyApp());
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
 }
 
 class MyApp extends StatelessWidget {
@@ -15,9 +27,8 @@ class MyApp extends StatelessWidget {
       title: 'BUKU KEUANGAN MAHASISWA',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.grey),
-        // Jika Anda menggunakan Flutter 2.x, perhatikan bahwa properti `useMaterial3` sudah tidak ada lagi.
       ),
-      home: Launcher(),
+      home: AuthScreen(),
     );
   }
 }

@@ -40,14 +40,14 @@ class _MainMenuState extends State<MainMenu>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0), // Ketinggian header
+        preferredSize: Size.fromHeight(60.0),
         child: AppBar(
           title: Text('MYMONEY'),
           backgroundColor: Color.fromARGB(255, 77, 150, 205),
         ),
       ),
       bottomNavigationBar: PreferredSize(
-        preferredSize: Size.fromHeight(20.0), // Ketinggian footer
+        preferredSize: Size.fromHeight(20.0),
         child: BottomAppBar(
           color: Color.fromARGB(255, 77, 150, 205),
           child: Container(
@@ -56,7 +56,6 @@ class _MainMenuState extends State<MainMenu>
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                  
                   onPressed: () {},
                   icon: Icon(Icons.home_outlined),
                   tooltip: 'MENU',
@@ -120,16 +119,12 @@ class _MainMenuState extends State<MainMenu>
               Text('SELAMAT DATANG DI MYMONEY'),
               SizedBox(height: 20),
               MainMenuGrid(),
-              
             ],
           ),
         ),
-        
       ),
-      
     );
   }
-  
 
   Widget _buildImageWithText(String imagePath, String text) {
     return Padding(
@@ -163,7 +158,6 @@ class _MainMenuState extends State<MainMenu>
   }
 }
 
-
 class MainMenuGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -189,18 +183,23 @@ class MainMenuGrid extends StatelessWidget {
             context,
             MaterialPageRoute(builder: (context) => LaporanPemasukan()),
           );
-        }, icon: Icons.history), // Menggunakan icon history untuk Laporan Pemasukan
+        },
+            icon: Icons
+                .history), // Menggunakan icon history untuk Laporan Pemasukan
         _buildMenuCard(context, 'Laporan Pengeluaran', () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => LaopranPengeluaran()),
           );
-        }, icon: Icons.history), // Menggunakan icon history untuk Laporan Pengeluaran
+        },
+            icon: Icons
+                .history), // Menggunakan icon history untuk Laporan Pengeluaran
       ],
     );
   }
 
-  Widget _buildMenuCard(BuildContext context, String title, Function onTap, {IconData? icon}) {
+  Widget _buildMenuCard(BuildContext context, String title, Function onTap,
+      {IconData? icon}) {
     return GestureDetector(
       onTap: () {
         onTap();
@@ -217,7 +216,9 @@ class MainMenuGrid extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(icon ?? Icons.attach_money, size: 30), // Menggunakan icon history jika tersedia, jika tidak, menggunakan icon attach_money
+                  Icon(icon ?? Icons.attach_money,
+                      size:
+                          30), // Menggunakan icon history jika tersedia, jika tidak, menggunakan icon attach_money
                   SizedBox(height: 5),
                   Text(
                     title,

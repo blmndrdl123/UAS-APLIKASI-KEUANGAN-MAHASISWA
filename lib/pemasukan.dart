@@ -31,7 +31,8 @@ class _PemasukanState extends State<Pemasukan> {
     );
     if (pickedDate != null)
       setState(() {
-        _dateController.text = pickedDate.toString(); // Mengubah format sesuai kebutuhan
+        _dateController.text =
+            pickedDate.toString(); // Mengubah format sesuai kebutuhan
       });
   }
 

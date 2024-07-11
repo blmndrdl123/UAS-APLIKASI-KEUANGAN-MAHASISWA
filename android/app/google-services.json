@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "509478144056",
+    "project_id": "uaspemmobile",
+    "storage_bucket": "uaspemmobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509478144056:android:21cc07dff5e3a657bf3ecd",
+        "android_client_info": {
+          "package_name": "com.example.uts_pemmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU2Zz5wCfrTyH4HZkHl0LcN2Wr72tNE9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
